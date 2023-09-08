@@ -1,0 +1,28 @@
+
+
+
+section {
+  height: 100%;
+}
+
+.review-para {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+/* hr {
+  margin: 5%;
+  color: lightblue;
+} */
+
+.newTitle {
+  vertical-align: middle;
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 70px;
+  text-shadow: 7px 7px 7px rgb(0, 0, 0);
+
+}

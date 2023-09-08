@@ -21,9 +21,6 @@ import { Link } from "react-router-dom";
 import {
   Button,
   Collapse,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   UncontrolledDropdown,
   NavbarBrand,
   Navbar,
@@ -33,8 +30,9 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip,
 } from "reactstrap";
+
+import "./IndexNavbar.css";
 
 export default function IndexNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
@@ -48,8 +46,8 @@ export default function IndexNavbar() {
   }, []);
   const changeColor = () => {
     if (
-      document.documentElement.scrollTop > 99 ||
-      document.body.scrollTop > 99
+      document.documentElement.scrollTop > 99.88 ||
+      document.body.scrollTop > 99.88
     ) {
       setColor("bg-info");
     } else if (
@@ -76,15 +74,13 @@ export default function IndexNavbar() {
   };
   return (
     <Navbar className={"fixed-top " + color} color-on-scroll="100" expand="lg">
-      <Container>
+      <Container className="my-2 barNeedsWork">
         <div className="navbar-translate">
           <NavbarBrand to="/" tag={Link} id="navbar-brand">
-            <span>BLK• </span>
-            Design System React
+            <span>Without• </span>
+            Spot OR Blemish
           </NavbarBrand>
-          <UncontrolledTooltip placement="bottom" target="navbar-brand">
-            Designed and Coded by Creative Tim
-          </UncontrolledTooltip>
+
           <button
             aria-expanded={collapseOpen}
             className="navbar-toggler navbar-toggler"
@@ -105,8 +101,9 @@ export default function IndexNavbar() {
           <div className="navbar-collapse-header">
             <Row>
               <Col className="collapse-brand" xs="6">
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                  BLK•React
+                <a href="/" onClick={(e) => e.preventDefault()}>
+                  <span>Without• </span>
+                  Spot OR Blemish
                 </a>
               </Col>
               <Col className="collapse-close text-right" xs="6">
@@ -120,45 +117,69 @@ export default function IndexNavbar() {
               </Col>
             </Row>
           </div>
-          <Nav navbar>
-            <NavItem className="p-0">
+          <Nav navbar className="w-100">
+            <div className="mx-auto d-flex align-content-lg-center justify-content-center text-center navClassNew">
+              <NavItem className="p-0">
+                <NavLink
+                  data-placement="bottom"
+                  href="/"
+                  rel="noopener noreferrer"
+                  // target="_blank"
+                  title="Follow us on Twitter"
+                >
+                  {/* <i className="fab fa-twitter" /> */}
+                  <p className="d-lg d-xl">Home</p>
+                </NavLink>
+              </NavItem>
+              <NavItem className="p-0">
+                <NavLink
+                  data-placement="bottom"
+                  href="/about-us"
+                  rel="noopener noreferrer"
+                  // target="_blank"
+                  title="Like us on Facebook"
+                >
+                  {/* <i className="fab fa-facebook-square" /> */}
+                  <p className="d-lg d-xl">About </p>
+                </NavLink>
+              </NavItem>
+              {/* <NavItem className="p-0">
               <NavLink
                 data-placement="bottom"
-                href="https://twitter.com/CreativeTim"
+                href="/giftcards"
                 rel="noopener noreferrer"
-                target="_blank"
-                title="Follow us on Twitter"
-              >
-                <i className="fab fa-twitter" />
-                <p className="d-lg-none d-xl-none">Twitter</p>
-              </NavLink>
-            </NavItem>
-            <NavItem className="p-0">
-              <NavLink
-                data-placement="bottom"
-                href="https://www.facebook.com/CreativeTim"
-                rel="noopener noreferrer"
-                target="_blank"
-                title="Like us on Facebook"
-              >
-                <i className="fab fa-facebook-square" />
-                <p className="d-lg-none d-xl-none">Facebook</p>
-              </NavLink>
-            </NavItem>
-            <NavItem className="p-0">
-              <NavLink
-                data-placement="bottom"
-                href="https://www.instagram.com/CreativeTimOfficial"
-                rel="noopener noreferrer"
-                target="_blank"
                 title="Follow us on Instagram"
               >
-                <i className="fab fa-instagram" />
-                <p className="d-lg-none d-xl-none">Instagram</p>
+                <p className="d-lg d-xl">Gift</p>
               </NavLink>
-            </NavItem>
+            </NavItem> */}
+              <NavItem className="p-0">
+                <NavLink
+                  data-placement="bottom"
+                  href="/reviews"
+                  rel="noopener noreferrer"
+                  // target="_blank"
+                  title="Follow us on Instagram"
+                >
+                  {/* <i className="fab fa-instagram" /> */}
+                  <p className="d-lg d-xl">Reviews</p>
+                </NavLink>
+              </NavItem>
+              <NavItem className="p-0">
+                <NavLink
+                  data-placement="bottom"
+                  href="/careers"
+                  rel="noopener noreferrer"
+                  // target="_blank"
+                  title="Follow us on Instagram"
+                >
+                  {/* <i className="fab fa-instagram" /> */}
+                  <p className="d-lg d-xl">Join Us</p>
+                </NavLink>
+              </NavItem>
+            </div>
             <UncontrolledDropdown nav>
-              <DropdownToggle
+              {/* <DropdownToggle
                 caret
                 color="default"
                 data-toggle="dropdown"
@@ -167,26 +188,26 @@ export default function IndexNavbar() {
                 onClick={(e) => e.preventDefault()}
               >
                 <i className="fa fa-cogs d-lg-none d-xl-none" />
-                Getting started
-              </DropdownToggle>
-              <DropdownMenu className="dropdown-with-icons">
+                Services
+              </DropdownToggle> */}
+              {/* <DropdownMenu className="dropdown-with-icons">
                 <DropdownItem href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/overview">
                   <i className="tim-icons icon-paper" />
-                  Documentation
+                  Recurring Service
                 </DropdownItem>
                 <DropdownItem tag={Link} to="/register-page">
                   <i className="tim-icons icon-bullet-list-67" />
-                  Register Page
+                  Deep Cleaning
                 </DropdownItem>
                 <DropdownItem tag={Link} to="/landing-page">
                   <i className="tim-icons icon-image-02" />
-                  Landing Page
+                  Move In/Move Out Cleaning
                 </DropdownItem>
                 <DropdownItem tag={Link} to="/profile-page">
                   <i className="tim-icons icon-single-02" />
-                  Profile Page
+                  Office Cleaning
                 </DropdownItem>
-              </DropdownMenu>
+              </DropdownMenu> */}
             </UncontrolledDropdown>
             <NavItem>
               <Button
@@ -195,7 +216,7 @@ export default function IndexNavbar() {
                 target="_blank"
                 href="https://www.creative-tim.com/product/blk-design-system-pro-react?ref=bdsr-user-archive-index-navbar-upgrade-pro"
               >
-                <i className="tim-icons icon-spaceship" /> Upgrade to PRO
+                <i className="tim-icons icon-spaceship" /> Get A Quote
               </Button>
             </NavItem>
             <NavItem>
@@ -204,7 +225,7 @@ export default function IndexNavbar() {
                 color="default"
                 onClick={scrollToDownload}
               >
-                <i className="tim-icons icon-cloud-download-93" /> Download
+                <i className="tim-icons icon-mobile" /> 1 &#40;800&#41;-842-7891
               </Button>
             </NavItem>
           </Nav>

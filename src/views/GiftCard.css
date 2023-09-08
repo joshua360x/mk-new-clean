@@ -1,0 +1,42 @@
+
+
+
+section {
+  height: 100%;
+}
+
+/* .back {
+  background: url(../assets/img/clean-back.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 30%;
+} */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.wrapper > img {
+  border-radius: 75px;
+}
+
+div > h3 {
+  text-align: center;
+  margin-top: 10%;
+}
+
+
+.newTitle {
+  vertical-align: middle;
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 70px;
+  text-shadow: 7px 7px 7px rgb(0, 0, 0);
+
+}
+

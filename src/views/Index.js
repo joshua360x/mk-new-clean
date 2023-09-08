@@ -34,6 +34,15 @@ import NucleoIcons from "views/IndexSections/NucleoIcons.js";
 import Signup from "views/IndexSections/Signup.js";
 import Examples from "views/IndexSections/Examples.js";
 import Download from "views/IndexSections/Download.js";
+import UnderHero from "components/PageHeader/UnderHero";
+import LineBar from "components/PageHeader/LineBar";
+import LeftRight from "components/PageHeader/LeftRight";
+import RightLeft from "components/PageHeader/RightLeft";
+import Review from "./Review";
+import BookNow from "./BookNow";
+// import MediaQuery from "react-responsive/types/Component";
+import MediaQuery from 'react-responsive'
+// import Reviews from "components/PageHeader/Reviews";
 
 export default function Index() {
   React.useEffect(() => {
@@ -49,8 +58,56 @@ export default function Index() {
       <div className="wrapper">
         <PageHeader />
         <div className="main">
-          <Basics />
-          <Navbars />
+          {/* <Basics /> */}
+          <UnderHero />
+          {/* <LineBar /> */}
+          <LineBar description='A Cleaning Service You Can Trust!' />
+          <MediaQuery maxWidth={992}>
+          <RightLeft title='Your Welcome Living Room' description='We know the family room is a place when the people you love gather. We will make sure it iss a room that you are proud to welcome family and friends.' b1='Dust all furniture
+' b2='Dust TV and other electronics
+' b3='Straighten pillows and throws
+' b4='Dust baseboards and windowsills
+' />
+          <RightLeft title='Your Spotless Kitchen ' description='Cooking meals for your family is a lot more fun when the kitchen is nice and clean! We will make sure everything is sanitized and sparkles.' b1='Wipe down cabinet fronts
+' b2='Wipe down and sanitize countertops
+' b3='Clean the microwave inside and out
+' b4='Clean and polish all appliances' />
+<RightLeft title='Your Sparkling Bathroom' description='A clean and tidy bathroom makes getting ready in the morning less stressful. We will make sure everything is cleaned, sanitized and in its place.' b1='Clean sinks and countertops; polish fixtures
+' b2='Clean mirrors
+' b3='Sanitize toilet area
+' b4='Vacuum bathroom rugs
+' />
+<RightLeft title='Your Relaxing Bedroom' description='Your bedroom is your oasis.  Relax and enjoy your perfectly clean bedroom.' b1='Dust all furniture
+' b2='Dust wall art, lamps and knick-knacks
+' b3='Dust ceiling fan
+' b4='Vacuum and mop floors
+' />
+          </MediaQuery>
+          <MediaQuery minWidth={993}>
+          <RightLeft title='Your Welcome Living Room' description='We know the family room is a place when the people you love gather. We will make sure it iss a room that you are proud to welcome family and friends.' b1='Dust all furniture
+' b2='Dust TV and other electronics
+' b3='Straighten pillows and throws
+' b4='Dust baseboards and windowsills
+' />
+          <LeftRight title='Your Spotless Kitchen ' description='Cooking meals for your family is a lot more fun when the kitchen is nice and clean! We will make sure everything is sanitized and sparkles.' b1='Wipe down cabinet fronts
+' b2='Wipe down and sanitize countertops
+' b3='Clean the microwave inside and out
+' b4='Clean and polish all appliances' />
+<RightLeft title='Your Sparkling Bathroom' description='A clean and tidy bathroom makes getting ready in the morning less stressful. We will make sure everything is cleaned, sanitized and in its place.' b1='Clean sinks and countertops; polish fixtures
+' b2='Clean mirrors
+' b3='Sanitize toilet area
+' b4='Vacuum bathroom rugs
+' />
+<LeftRight title='Your Relaxing Bedroom' description='Your bedroom is your oasis.  Relax and enjoy your perfectly clean bedroom.' b1='Dust all furniture
+' b2='Dust wall art, lamps and knick-knacks
+' b3='Dust ceiling fan
+' b4='Vacuum and mop floors
+' />
+          </MediaQuery>
+          
+<LineBar description='Clean Home = Happy Family' />
+{/* <Reviews /> */}
+          {/* <Navbars />
           <Tabs />
           <Pagination />
           <Notifications />
@@ -59,7 +116,9 @@ export default function Index() {
           <NucleoIcons />
           <Signup />
           <Examples />
-          <Download />
+          <Download /> */}
+          <Review />
+          <BookNow />
         </div>
         <Footer />
       </div>
