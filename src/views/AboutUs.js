@@ -85,7 +85,7 @@ export default function AboutUs() {
             </p>
           </Col>
         </Row>
-        <hr />
+        {/* <hr /> */}
         {/* <div>
         <div>Text</div>
         <div>Photo</div>
